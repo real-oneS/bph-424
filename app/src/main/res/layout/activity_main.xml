@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B5C3EA"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/main_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="serif"
+            android:text="БПХ - 424"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvControl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Регистры контроля"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/main_label"
+            app:layout_constraintStart_toStartOf="@+id/main_label"
+            app:layout_constraintTop_toBottomOf="@+id/main_label" />
+
+        <ScrollView
+            android:id="@+id/svControl"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvControl"
+            app:layout_constraintStart_toStartOf="@+id/tvControl"
+            app:layout_constraintTop_toBottomOf="@+id/tvControl">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="SlaveAddr"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/slaveAddr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="DutyCycle"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/dutyCycle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+
+                    android:hint=" ..."
+                    android:inputType="text"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ModemTimeout"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/modemTimeout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ExposNorm"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/exposNorm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ThresNorm"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/thresNorm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ExposHigh"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/exposHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ThresHigh"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/thresHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Seconds"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/seconds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="CountDown"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/countDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="CtrlReg.High"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ctrlReg.High"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="CtrlReg.Low"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ctrlReg.Low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="ArchPointer"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/archPointer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Temperature"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="VoltBattery"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/voltBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="CurrSleep"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/currSleep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/label16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="CurrActive"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/currActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvNows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="monospace"
+            android:text="Текущие измерения"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/svControl"
+            app:layout_constraintStart_toStartOf="@+id/svControl"
+            app:layout_constraintTop_toBottomOf="@+id/svControl" />
+
+        <ScrollView
+            android:id="@+id/svNows"
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvNows"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tvNows"
+            app:layout_constraintTop_toBottomOf="@+id/tvNows">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/labelExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="Exp.Time:"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/expTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/labelCh1Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel1(Count)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel1Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh1Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel1(Count/10)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel1Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh1Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel1(Saved)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel1Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh2Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel2(Count)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel2Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh2Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel2(Count/10)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel2Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh2Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel2(Saved)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel2Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh3Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel3(Count)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel3Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh3Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel3(Count/10)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel3Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh3Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel3(Saved)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel3Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh4Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel4(Count)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel4Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh4Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel4(Count/10)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel4Count10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelCh4Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="monospace"
+                    android:text="Chanel4(Saved)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/chanel4Saved"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="3dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint=" ..."
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
